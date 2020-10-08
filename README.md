@@ -24,12 +24,12 @@ Immediately execute the function when a new file is added (only 1 file at a time
   onChangeFile = (event) => {
     //setting the file to the input
     if (event.target.files[0]) {
-      let file = event.target.files[0];
+      let image = event.target.files[0];
       let context = this;
       //calling the image processing function
       (async function () {
         context.setState({ hiddenProgress: false });
-        let image = await ProcessImage(file, "squarePicture", context);
+        let image = await ProcessImage(image, "squarePicture", context);
         if (image && context !== undefined) {
           context.setState({ picture: image });
         }
