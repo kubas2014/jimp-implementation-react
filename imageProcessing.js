@@ -36,8 +36,8 @@ function Progress(context) {
 //3 optional: pass scope through the context param, which lets you bind the Progress function to the setUploadProgress available in the other file's scope
 
 export default async function ProcessImage(image, crop, context) {
-  //if image or crop params are undefined, return
-  if (image === undefined || crop === undefined) {
+  //if image param is undefined, return
+  if (image === undefined) {
     return;
   }
   //defining progressBar with or without context scope
