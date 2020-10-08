@@ -20,7 +20,7 @@ Import the function in another JS file:
 `import ProcessImage from "../../services/imageProcessing";`
 
 Immediately execute the function when a new file is added (only 1 file at a time here):
-`
+```javascript
   onChangeFile = (event) => {
     //setting the file to the input
     if (event.target.files[0]) {
@@ -36,10 +36,10 @@ Immediately execute the function when a new file is added (only 1 file at a time
       })();
     }
   };
-  `
+```
   Function to update React's state (assumes uploadProgress is defined):
-  `
+```javascript
     setUploadProgress = (progress) => {
     this.setState({ uploadProgress: progress });
   };
-  `
+```
